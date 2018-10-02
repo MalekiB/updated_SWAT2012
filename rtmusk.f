@@ -143,8 +143,8 @@
       
 !! Discretize time interval to meet the stability criterion
 !! Modified by Nguyen 06/09/2018
-      nn = int(det/detmax) + 1
-      det = 24.0/nn
+      nn = int(det/detmax) + 1        !!nn could be very large in some cases -> simulation time significantly increases
+      det = 24.0/nn                   !!im some cases, det > detmax
       
  !! Inflow during a sub time interval     
       wtrin = wtrin / nn
